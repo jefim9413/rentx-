@@ -5,6 +5,10 @@
   "repository": "https://github.com/jefim9413/Ignite-back-end.git",
   "author": "Jefferson Marques <jefferson.jsm3444@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+  },
   "dependencies": {
     "express": "^4.18.1"
   },
