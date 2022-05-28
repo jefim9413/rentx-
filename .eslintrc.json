@@ -18,6 +18,7 @@
 			"prettier"
 	],
 	"rules": {
+    "no-useless-constructor":"off",
 		"no-console": "off",
 		"no-use-before-define": "off",
 		"class-methods-use-this": "off",
