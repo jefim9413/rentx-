@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "rentx Documentation",
+    "title": "Rentx Documentation",
     "description": "This is an API rent",
     "version": "1.0.0",
     "contact": {
@@ -71,6 +71,67 @@
               }
             }
           }
+        }
+      }
+    },
+    "specifications": {
+      "post": {
+        "tags": ["Specifications"],
+        "summary": "create a specification",
+        "description": "Create a new specification",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema":{
+                "$ref":"#/definitions/Specifications"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "specifications already exists"
+          }
+        }
+      }
+    }
+  },
+  "specifications": {
+    "post": {
+      "tags": ["Specifications"],
+      "summary": "create a specification",
+      "description": "Create a new specification",
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema":{
+              "$ref":"#/definitions/Specifications"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Created"
+        },
+        "500": {
+          "description": "specifications already exists"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Specifications": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
         }
       }
     }
