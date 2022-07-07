@@ -13,14 +13,12 @@ class CreateUserUsecase {
     name,
     email,
     password,
-    username,
     driver_license,
   }: ICreateUserDTO): Promise<void> {
     await this.usersRepository.create({
       name,
       email,
       password,
-      username,
       driver_license,
     });
   }

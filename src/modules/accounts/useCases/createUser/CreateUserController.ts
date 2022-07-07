@@ -4,7 +4,7 @@ import { CreateUserUsecase } from './CreateUserUseCase';
 
 class CreateUserUseController {
   async handle(resquet: Request, response: Response): Promise<Response> {
-    const { name, email, password, username, driver_license } = resquet.body;
+    const { name, email, password, driver_license } = resquet.body;
 
     const createUserUseCase = container.resolve(CreateUserUsecase);
 
@@ -12,7 +12,6 @@ class CreateUserUseController {
       name,
       email,
       password,
-      username,
       driver_license,
     });
     return response.status(201).send();
