@@ -1,11 +1,11 @@
-import { inject } from 'tsyringe';
+import { inject, injectable } from 'tsyringe';
 import { UsersRepository } from '../../repositories/implementations/UsersRepository';
 
 interface IRequest {
   user_id: string;
   avatar_file: string;
 }
-
+@injectable()
 class UpdateUserAvatarUseCase {
   constructor(
     @inject('UsersRepository')
